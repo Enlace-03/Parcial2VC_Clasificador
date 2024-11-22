@@ -62,12 +62,13 @@ def HOG(ruta):
 
     return vector_hog
 
-#Ejemplo de uso
+#Ejemplo de uso, si se va a usar en este archi descomentar las siguiente lineas a partir de ruta = "./BaseDatos/Positivo/frameb3_0217.jpg"
 #Esto solo se hace una vez, es para calcular el fondo
-carpeta_imagenes_fondo = "./SoloFondo" #ruta del archivo
-background_model = calcular_fondo(carpeta_imagenes_fondo)
+carpeta_imagenes_fondo = "./SoloFondo_Entrenamiento" #ruta del archivo
+background_model = calcular_fondo(carpeta_imagenes_fondo)   ##Decirle a romero que esto si o si debe estar descomentado o geenrarlo en otro archivo y mandarlo como entrada de la funcion
+print("Finalizado background_model")
 
 #Esto se hace para calcular el HOG de cada imagen, es decir esto se itera
-ruta = "./Personas/frameb3_0217.jpg"
-vector_hog = HOG(ruta)
-print(len(vector_hog))
+# ruta = "./BaseDatos/Positivo/frameb3_0217.jpg"
+# vector_hog = HOG(ruta)
+# print(len(vector_hog))
